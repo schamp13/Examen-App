@@ -1,0 +1,115 @@
+<div class="wrapper">
+  <div class="examen-section">
+    <!-- navbar -->
+    <div class="examen-header">
+      <app-navbar></app-navbar>
+    </div>
+
+    <!-- body -->
+    <div class="examen-body">
+      <!-- seccion de preguntas -->
+      <section class="section-preguntas">
+        <div class="navegador-preguntas mt-3 mb-3">
+          <!-- bootstrap -->
+          <nav aria-label="Page navigation example" style="color: black;">
+            <ul class="pagination" style="color: black;">
+              <li class="page-item"><button class="page-link" style="color: black;">Previous</button></li>
+              <li class="page-item"><button class="page-link" style="color: black;" (click)="valGramatica()">1</button></li>
+              <li class="page-item"><button class="page-link" style="color: black;" (click)="valLectura()">2</button></li>
+              <li class="page-item"><button class="page-link" style="color: black;" (click)="valAudio()">3</button></li>
+              <li class="page-item"><button class="page-link" style="color: black;">Next</button></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="pregunta-prev-next">
+          <div class="previus col-1">
+            <i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="black" class="bi bi-arrow-left-circle-fill"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+              </svg>
+            </i>
+          </div>
+
+          <div class="pregunta col-10">
+            <!-- recurso variable -->
+            <section class="recurso-pregunta">
+              <!-- gramatica -->
+              <section class="recurso-gramatica" *ngIf="isGramatica">
+                <app-examen-gramatica></app-examen-gramatica>
+              </section>
+
+              <!-- lectura -->
+              <section class="recurso-lectura" *ngIf="isLectura">
+                <app-examen-lectura></app-examen-lectura>
+              </section>
+
+              <!-- audio -->
+              <section class="recurso-audio" *ngIf="isAudio">
+                <app-examen-audio></app-examen-audio>
+              </section>
+            </section>
+          </div>
+          <div class="next col-1">
+            <i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="black" class="bi bi-arrow-right-circle-fill"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+              </svg>
+            </i>
+          </div>
+        </div>
+
+        <div class="section-boton-enviar mt-3 mb-3">
+          <button type="button" class="btn btn-outline-success" (click)="moveResultados()">Enviar</button>
+        </div>
+
+      </section>
+
+      <!-- seccion de respuestas -->
+      <section class="section-respuestas">
+        <div class="respuestas">
+          <!-- pregunta 1 -->
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Respuesta 1
+            </label>
+          </div>
+
+          <!-- pregunta 2 -->
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Respuesta 2
+            </label>
+          </div>
+
+          <!-- pregunta 3 -->
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Respuesta 3
+            </label>
+          </div>
+
+          <!-- pregunta 4 -->
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Respuesta 4
+            </label>
+          </div>
+        </div>
+
+
+
+
+      </section>
+
+    </div>
+  </div>
+</div>

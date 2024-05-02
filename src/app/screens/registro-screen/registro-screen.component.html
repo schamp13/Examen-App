@@ -1,0 +1,126 @@
+<div class="wrapper">
+  <div class="section-registro">
+    <!-- navbar -->
+    <div class="examen-header">
+      <app-navbar></app-navbar>
+    </div>
+
+    <div class="body-registro">
+      <div class="mt-3 mb-3">
+        <!-- Titulo -->
+        <div class="form-group col-12" style="text-align: center;">
+          <label class="title-user" for="tipo_usuario">Ingresa los datos del Alumno</label>
+        </div>
+
+        <!-- campos del formulario -->
+
+        <!-- Input de ID/Matricula -->
+        <mat-form-field class="mat-input" appearance="outline">
+          <mat-label>Matricula de Alumno</mat-label>
+          <input matInput  name="id" placeholder="Escribe la matricula">
+        </mat-form-field>
+        <!-- <div *ngIf="errors.matricula" class="invalid-feedback">{{ errors.matricula }}</div> -->
+
+        <!-- Input de Nombre -->
+        <mat-form-field class="mat-input" appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input matInput  placeholder="Escribe nombre">
+        </mat-form-field>
+        <!-- <div *ngIf="errors.first_name" class="invalid-feedback">{{ errors.first_name }}</div> -->
+
+        <!-- Input de Apellidos -->
+        <mat-form-field class="mat-input" appearance="outline">
+          <mat-label>Apellidos</mat-label>
+          <input matInput  placeholder="Escribe apellidos">
+        </mat-form-field>
+        <!-- <div *ngIf="errors.last_name" class="invalid-feedback">{{ errors.last_name }}</div> -->
+
+        <!-- Input de Correo -->
+        <mat-form-field class="mat-input" appearance="outline">
+          <mat-label>Correo electrónico</mat-label>
+          <input matInput  placeholder="Escribe correo electrónico">
+        </mat-form-field>
+        <!-- <div *ngIf="errors.email" class="invalid-feedback">{{ errors.email }}</div> -->
+
+        <!-- Input de Contraseña
+        <mat-form-field class="mat-input" appearance="outline" >
+          <mat-label>Contraseña</mat-label>
+          <input matInput  type="" placeholder="Escribe contraseña">
+          <mat-icon matSuffix class="eye-icon" (click)="showPassword()">{{hide_1 ? 'visibility_off' :
+            'visibility'}}</mat-icon>
+        </mat-form-field>
+        <div *ngIf="errors.password" class="invalid-feedback">{{ errors.password }}</div> -->
+
+        <!-- Input de Confirmar Contraseña
+        <mat-form-field class="mat-input" appearance="outline" *ngIf="!editar">
+          <mat-label>Confirmar contraseña</mat-label>
+          <input matInput [(ngModel)]="alumno.confirmar_password" type="{{ inputType_2 }}"
+            placeholder="Confirma la contraseña">
+          <mat-icon matSuffix class="eye-icon" (click)="showPwdConfirmar()">{{hide_2 ? 'visibility_off' :
+            'visibility'}}</mat-icon>
+        </mat-form-field>
+        <div *ngIf="errors.confirmar_password" class="invalid-feedback">{{ errors.confirmar_password }}</div> -->
+
+        <!-- Input de Fecha de Nacimiento -->
+
+        <!-- <mat-form-field class="mat-input" appearance="outline" *ngIf="!editar">
+          <mat-label>Fecha de Nacimiento</mat-label>
+          <input matInput [(ngModel)]="alumno.fecha_nacimiento" type="{{ inputType_1 }}" placeholder="Fecha de nacimiento">
+          <mat-icon matSuffix class="" (click)="selectFecha()"></mat-icon>
+        </mat-form-field>
+        <div *ngIf="errors.password" class="invalid-feedback">{{ errors.password }}</div> -->
+        <!-- <mat-form-field class="mat-input" appearance="outline">
+          <mat-label>Fecha de Nacimiento</mat-label>
+          <input matInput [(ngModel)]="alumno.fecha_nacimiento" matInput [matDatepicker]="picker"
+            placeholder="MM/DD/YYYY">
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        </mat-form-field>
+        <div *ngIf="errors.fecha_nacimiento" class="invalid-feedback">{{ errors.fecha_nacimiento }}</div> -->
+
+        <!-- Input de CURP -->
+        <!-- <mat-form-field class="mat-input" appearance="outline">
+          <mat-label>CURP</mat-label>
+          <input matInput [(ngModel)]="alumno.curp" placeholder="CURP">
+        </mat-form-field>
+        <div *ngIf="errors.curp" class="invalid-feedback">{{ errors.curp }}</div> -->
+
+        <!-- Input de RFC -->
+        <!-- <mat-form-field class="mat-input" appearance="outline">
+          <mat-label>RFC</mat-label>
+          <input matInput [(ngModel)]="alumno.rfc" placeholder="Escribe RFC" style="text-transform: uppercase;">
+        </mat-form-field>
+        <div *ngIf="errors.rfc" class="invalid-feedback">{{ errors.rfc }}</div> -->
+
+        <!-- Input de Edad
+        <mat-form-field class="mat-input" appearance="outline">
+          <mat-label>Edad</mat-label>
+          <input matInput [(ngModel)]="alumno.edad" placeholder="Escribe la edad">
+        </mat-form-field>
+        <div *ngIf="errors.edad" class="invalid-feedback">{{ errors.edad }}</div> -->
+
+        <!-- Input de Télefono -->
+        <mat-form-field class="mat-input" appearance="outline">
+          <mat-label>Teléfono</mat-label>
+          <input matInput  mask='(000) 000-0000' placeholder="Escribe teléfono">
+        </mat-form-field>
+        <!-- <div *ngIf="errors.telefono" class="invalid-feedback">{{ errors.telefono }}</div> -->
+
+        <!-- Input de Ocupación -->
+        <!-- <mat-form-field class="mat-input" appearance="outline">
+          <mat-label>Ocupación</mat-label>
+          <input matInput [(ngModel)]="alumno.ocupacion" placeholder="Escribe la ocupación">
+        </mat-form-field>
+        <div *ngIf="errors.ocupacion" class="invalid-feedback">{{ errors.ocupacion }}</div> -->
+
+        <!-- Campo de botones -->
+        <div class="section-buttons">
+          <button class="btn btn-danger" (click)="regresar()">Cancelar</button>
+          <button  class="btn btn-primary" type="submit" (click)="registrar()">Registrar</button>
+         <!-- <button *ngIf="editar" class="btn btn-primary" type="submit" (click)="actualizar()">Actualizar</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
